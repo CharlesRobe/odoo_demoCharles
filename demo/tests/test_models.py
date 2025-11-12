@@ -33,7 +33,7 @@ class TestUsers(TransactionCase):
 
 
     def test_description_one_line(self):
-        with self.assertRaises(ValueError) as error_catcher:    
+        with self.assertRaises(ValueError) as error_catcher:
             self.env['res.users'].create({
                 'name': 'Jeremy',
                 'login': 'jem',
