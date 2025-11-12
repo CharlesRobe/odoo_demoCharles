@@ -29,11 +29,11 @@ class TestUsers(TransactionCase):
                     'name': 'Marie-Noël',
                     'login': 'mnv',
                 })
-                user.description = None
+                self.assertTrue(user.description)
 
 
     def test_description_one_line(self):
-        with self.assertRaises(ValueError) as error_catcher:
+        with self.assertRaises(ValueError) as error_catcher:    
             self.env['res.users'].create({
                 'name': 'Jeremy',
                 'login': 'jem',
